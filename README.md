@@ -1,6 +1,8 @@
 # Copy Fully Qualified Name - Visual Studio Extension
 
-A Visual Studio 2022 extension that allows you to right-click on any method, property, class, or member and copy its fully qualified name to the clipboard.
+A Visual Studio 2022 extension that allows you to right-click on any method, property, class, or member and copy its fully qualified name to the clipboard. This was built out of frustration from not being able to easily get the fully qualified names of members in large projects. 
+
+It gets old after the 100th in a row that you are trying to update a wiki article or a long commit message. 
 
 ## Features
 

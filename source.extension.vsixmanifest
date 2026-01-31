@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="CopyQualifiedName.f8b3c5a7-9d2e-4f1a-b6c8-3e7d9f0a1b2c" Version="1.0.0" Language="en-US" Publisher="pvera" />
+    <DisplayName>Copy Fully Qualified Name</DisplayName>
+    <Description xml:space="preserve">Right-click on any method, property, class, or member to copy its fully qualified name (Namespace.Class.Member) to the clipboard.</Description>
+    <MoreInfo>https://github.com/pvera/CopyQualifiedName</MoreInfo>
+    <License>LICENSE.txt</License>
+    <GettingStartedGuide>https://github.com/yourusername/CopyQualifiedName#readme</GettingStartedGuide>
+    <Icon>Resources\CopyIcon.png</Icon>
+    <PreviewImage>Resources\CopyIcon.png</PreviewImage>
+    <Tags>copy, qualified name, fully qualified, clipboard, namespace, productivity</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[17.0, 18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+    <InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[17.0, 18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.8,)" />
+  </Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
+    <Prerequisite Id="Microsoft.VisualStudio.Component.Roslyn.LanguageServices" Version="[17.0,18.0)" DisplayName="C# and Visual Basic" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+  </Assets>
+</PackageManifest>

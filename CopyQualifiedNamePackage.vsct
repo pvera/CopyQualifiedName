@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidCopyQualifiedNamePackage">
+    
+    <Groups>
+      <!-- Add our command group to the editor context menu -->
+      <Group guid="guidCopyQualifiedNamePackageCmdSet" id="EditorContextMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <!-- Copy Fully Qualified Name command -->
+      <Button guid="guidCopyQualifiedNamePackageCmdSet" id="CopyQualifiedNameCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidCopyQualifiedNamePackageCmdSet" id="EditorContextMenuGroup" />
+        <Icon guid="guidImages" id="bmpCopy" />
+        <Strings>
+          <ButtonText>Copy Fully Qualified Name</ButtonText>
+          <ToolTipText>Copy the fully qualified name (Namespace.Class.Member) to clipboard</ToolTipText>
+        </Strings>
+      </Button>
+
+      <!-- Copy Qualified Name Without Namespace command -->
+      <Button guid="guidCopyQualifiedNamePackageCmdSet" id="CopyQualifiedNameWithoutNamespaceCommandId" priority="0x0101" type="Button">
+        <Parent guid="guidCopyQualifiedNamePackageCmdSet" id="EditorContextMenuGroup" />
+        <Icon guid="guidImages" id="bmpCopy" />
+        <Strings>
+          <ButtonText>Copy Qualified Name (without namespace)</ButtonText>
+          <ToolTipText>Copy the qualified name without namespace (Class.Member) to clipboard</ToolTipText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\CopyIcon.png" usedList="bmpCopy"/>
+    </Bitmaps>
+    
+  </Commands>
+
+  <KeyBindings>
+    <KeyBinding guid="guidCopyQualifiedNamePackageCmdSet" id="CopyQualifiedNameCommandId" 
+                editor="guidVSStd97" key1="Q" mod1="Control Shift Alt" />
+  </KeyBindings>
+
+  <Symbols>
+    <GuidSymbol name="guidCopyQualifiedNamePackage" value="{f8b3c5a7-9d2e-4f1a-b6c8-3e7d9f0a1b2c}" />
+
+    <GuidSymbol name="guidCopyQualifiedNamePackageCmdSet" value="{a1b2c3d4-e5f6-7890-abcd-ef1234567890}">
+      <IDSymbol name="EditorContextMenuGroup" value="0x1020" />
+      <IDSymbol name="CopyQualifiedNameCommandId" value="0x0100" />
+      <IDSymbol name="CopyQualifiedNameWithoutNamespaceCommandId" value="0x0101" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{b2c3d4e5-f6a7-8901-bcde-f23456789012}">
+      <IDSymbol name="bmpCopy" value="1" />
+    </GuidSymbol>
+  </Symbols>
+  
+</CommandTable>

@@ -108,7 +108,10 @@ namespace CopyQualifiedName
         /// <summary>
         /// Formats the symbol name according to the specified options
         /// </summary>
-        private static string GetFormattedSymbolName(ISymbol symbol, bool includeNamespace)
+        /// <param name="symbol">The Roslyn symbol to format</param>
+        /// <param name="includeNamespace">Whether to include the namespace in the result</param>
+        /// <returns>The formatted symbol name</returns>
+        public static string GetFormattedSymbolName(ISymbol symbol, bool includeNamespace)
         {
             if (includeNamespace)
             {

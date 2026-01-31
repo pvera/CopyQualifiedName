@@ -16,11 +16,12 @@ namespace CopyQualifiedName
 
     /// <summary>
     /// Command IDs matching the VSCT file
-    /// The Command attribute expects an int ID
+    /// The Command attribute expects the GUID and ID in format "guid,id"
     /// </summary>
     internal static class PackageIds
     {
-        public const int CopyQualifiedNameCommandId = 0x0100;
-        public const int CopyQualifiedNameWithoutNamespaceCommandId = 0x0101;
+        // Format: "GUID,ID" - The Community Toolkit parses this format
+        public const string CopyQualifiedNameCommandId = PackageGuids.CmdSetGuidString + "," + "0x0100";
+        public const string CopyQualifiedNameWithoutNamespaceCommandId = PackageGuids.CmdSetGuidString + "," + "0x0101";
     }
 }

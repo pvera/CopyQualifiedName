@@ -8,7 +8,7 @@ namespace CopyQualifiedName
     /// <summary>
     /// Command to copy the fully qualified name (with namespace) to clipboard
     /// </summary>
-    [Command(PackageIds.CopyQualifiedNameCommandId)]
+    [Command(PackageGuids.CmdSetGuidString, 0x0100)]
     internal sealed class CopyQualifiedNameCommand : BaseCommand<CopyQualifiedNameCommand>
     {
         protected override async Task ExecuteAsync(OleMenuCmdEventArgs e)
@@ -30,7 +30,7 @@ namespace CopyQualifiedName
     /// <summary>
     /// Command to copy the qualified name without namespace to clipboard
     /// </summary>
-    [Command(PackageIds.CopyQualifiedNameWithoutNamespaceCommandId)]
+    [Command(PackageGuids.CmdSetGuidString, 0x0101)]
     internal sealed class CopyQualifiedNameWithoutNamespaceCommand : BaseCommand<CopyQualifiedNameWithoutNamespaceCommand>
     {
         protected override async Task ExecuteAsync(OleMenuCmdEventArgs e)
